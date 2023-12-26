@@ -48,7 +48,7 @@ jobs:
         echo "MAIL_PASSWORD=dsullcxewkdqafka" >> .env
         echo "MAIL_ENCRYPTION=tls" >> .env
         echo "MAIL_FROM_ADDRESS=bioneandroid@gmail.com" >> .env
-        echo "MAIL_FROM_NAME="BioneAzza" >> .env
+        echo "MAIL_FROM_NAME="BioneAzza"" >> .env
 
     - name: Generate JWT Secret
       run: |
