@@ -40,7 +40,7 @@ If you have Laravel Sail installed, you can also use Sail to manage the Docker c
 The API documentation can be generated inside the Docker container:
 
 ```bash
-docker exec -it azapfy-app-1 bash php artisan scribe:generate
+docker exec -it azapfy-app-1 php artisan scribe:generate
 ```
 You can view the API documentation at `http://0.0.0.0:8080/docs/`.
 You can import the postman_collection in your Postman too, its in the root directory in .json format.
