@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use MongoDB\Laravel\Eloquent\Model;
 use MongoDB\Laravel\Eloquent\SoftDeletes;
 
-use Illuminate\Support\Facades\Mail;
-
 class Invoice extends Model
 {
     use HasFactory, SoftDeletes;
@@ -28,14 +26,5 @@ class Invoice extends Model
     {
         return $this->belongsTo(User::class);
     }
-
-//    protected static function boot()
-//    {
-//        parent::boot();
-//
-//        static::created(function ($invoice) {
-//            Mail::to($invoice->user->email)->send(new InvoiceCreated($invoice));
-//        });
-//    }
 
 }
