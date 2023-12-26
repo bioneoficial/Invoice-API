@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "b54da3ba-c396-4457-860a-d031c4564971",
+		"name": "Azapfy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27560592"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Johan Doe\",\n    \"email\": \"joao.holanda1@soulasalle.com.br\",\n    \"password\": \"sec42423\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"joao.holanda1@soulasalle.com.br\",\n    \"password\": \"sec42423\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMC4wLjAuMDo4MDgwL2FwaS9sb2dpbiIsImlhdCI6MTcwMzQ0NzU2NCwiZXhwIjoxNzAzNDUxMTY0LCJuYmYiOjE3MDM0NDc1NjQsImp0aSI6Ikg5MGxUUHFNRWFwOExGenIiLCJzdWIiOiI2NTg4N2NlYTBmOTc5NDMwZDQwNDY1ZDciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.377JKoC0MHjsuDq0Ey-qLF3c_pnif0NIlaMxYHttnw8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8080/api/user",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoices",
+			"item": [
+				{
+					"name": "PostInvoice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMC4wLjAuMDo4MDgwL2FwaS9sb2dpbiIsImlhdCI6MTcwMzU1NjQ1OCwiZXhwIjoxNzAzNTYwMDU4LCJuYmYiOjE3MDM1NTY0NTgsImp0aSI6IlhaR0M2YnBlckRZQVhCdDQiLCJzdWIiOiI2NThhMzU2NDBmOTc5NDMwZDQwNDY1ZTgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.yakGgfoVWUP9hV5PiSJ2k3p140aD1ItlHI4ZhlkoHZI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numero\": \"123455969\",\n    \"valor\": 10.50,\n    \"data_emissao\": \"2022-12-23\",\n    \"cnpj_remetente\": \"98765432000198\",\n    \"nome_remetente\": \"Empresa Axemplo\",\n    \"cnpj_transportador\": \"98765432000198\",\n    \"nome_transportador\": \"Transportadora Pxemplo\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8080/api/invoices",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInvoice",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMC4wLjAuMDo4MDgwL2FwaS9sb2dpbiIsImlhdCI6MTcwMzU1NjU2NywiZXhwIjoxNzAzNTYwMTY3LCJuYmYiOjE3MDM1NTY1NjcsImp0aSI6InU3azVENTFCazlxQ0FIMUYiLCJzdWIiOiI2NThhMzVjZTQ3OTZlNzljMTEwOGUxZWMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.uBzlDoqHZiSaGGmyF3TH9PzwqaxAQra_CYp64BOXgZU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8080/api/invoices",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeInvoice",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMC4wLjAuMDo4MDgwL2FwaS9sb2dpbiIsImlhdCI6MTcwMzUyNTA1MCwiZXhwIjoxNzAzNTI4NjUwLCJuYmYiOjE3MDM1MjUwNTAsImp0aSI6Ik41MzF4Vkhwc01MSHFpWmYiLCJzdWIiOiI2NTg4OTRkODBmOTc5NDMwZDQwNDY1ZTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Ujz9QmQStQ0b48x-6KbPUPYFwdLbz0NWFW7wZhQ5iOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"numero\": \"987654321\",\n  \"valor\": 2000.5,\n  \"data_emissao\": \"2023-06-30\",\n  \"nome_remetente\": \"Empresa Exemplo Atualizada\",\n  \"nome_transportador\": \"Transportadora Exemplo Atualizada\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8080/api/invoices/6589bad44796e79c1108e1e7",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"invoices",
+								"6589bad44796e79c1108e1e7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SoftDeleteInvoice",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMC4wLjAuMDo4MDgwL2FwaS9sb2dpbiIsImlhdCI6MTcwMzUyNTA1MCwiZXhwIjoxNzAzNTI4NjUwLCJuYmYiOjE3MDM1MjUwNTAsImp0aSI6Ik41MzF4Vkhwc01MSHFpWmYiLCJzdWIiOiI2NTg4OTRkODBmOTc5NDMwZDQwNDY1ZTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Ujz9QmQStQ0b48x-6KbPUPYFwdLbz0NWFW7wZhQ5iOY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8080/api/invoices/6589bad44796e79c1108e1e7",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"invoices",
+								"6589bad44796e79c1108e1e7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSpecificInvoice",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMC4wLjAuMDo4MDgwL2FwaS9sb2dpbiIsImlhdCI6MTcwMzU1NjU2NywiZXhwIjoxNzAzNTYwMTY3LCJuYmYiOjE3MDM1NTY1NjcsImp0aSI6InU3azVENTFCazlxQ0FIMUYiLCJzdWIiOiI2NThhMzVjZTQ3OTZlNzljMTEwOGUxZWMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.uBzlDoqHZiSaGGmyF3TH9PzwqaxAQra_CYp64BOXgZU",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMC4wLjAuMDo4MDgwL2FwaS9sb2dpbiIsImlhdCI6MTcwMzU1NjU2NywiZXhwIjoxNzAzNTYwMTY3LCJuYmYiOjE3MDM1NTY1NjcsImp0aSI6InU3azVENTFCazlxQ0FIMUYiLCJzdWIiOiI2NThhMzVjZTQ3OTZlNzljMTEwOGUxZWMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.uBzlDoqHZiSaGGmyF3TH9PzwqaxAQra_CYp64BOXgZU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8080/api/invoices/658a359c4796e79c1108e1eb",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"invoices",
+								"658a359c4796e79c1108e1eb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://0.0.0.0:8080/api/test-mongo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8080/api/test-mongo",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test-mongo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
